@@ -3,16 +3,13 @@
 #include <Adafruit_NeoPixel.h>
 #include "env.h"
 
-char ReplyBuffer[] = "acknowledged";
 char packetBuffer[255];
-unsigned int port = 2390;
-
-const int LED_PIN = D8;
+char ReplyBuffer[]      = "acknowledged";
+unsigned int port       = 2390;
 const double MAX_BRIGHT = 6.82;
 
 WiFiUDP Udp;
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
-
 
 void setup() {
   pixels.begin();
